@@ -7,12 +7,13 @@
   <title>FORM VALIDATION</title>
 </head>
 <link rel="stylesheet" href="./styles/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <body>
   <div class="container">
     <h2>Connect with us</h2>
     <form action="#" class="form" id="form">
       <div class="form-control">
-        <label for="username">Username</label>
+        <label for="username">Username <span>*</span></label>
         <input 
           type="text"
           name="username"
@@ -22,7 +23,7 @@
         <small>Username is Required</small>
       </div>
       <div class="form-control">
-        <label for="email">Email</label>
+        <label for="email">Email<span>*</span></label>
         <input 
           type="text"
           name="email"
@@ -32,29 +33,55 @@
         <small>Email is Required</small>
       </div>
       <div class="form-control">
-        <label for="password">Password</label>
+        <label for="number">Phone Number<span>*</span></label>
+        <input 
+          type="text"
+          name="number"
+          id="number"
+          placeholder="Enter Phone Number"
+          />
+        <small>Email is Required</small>
+      </div>
+      <div class="form-control">
+        <label for="password">Password<span>*</span></label>
         <input 
           type="password"
           name="password"
           id="password"
           placeholder="Enter Password"
-          required
           />
+          <a href="#"><i class="fa-solid fa-eye fa-2x"></i></a>
+          
         <small>Password is Required</small>
       </div>
       <div class="form-control">
-        <label for="confirm-password">Confirm Password</label>
+        <label for="confirm-password">Confirm Password<span>*</span></label>
         <input 
           type="password"
           name="confirm-password"
           id="confirm-password"
           placeholder="Confirm Password"
-          required
           />
         <small>Confirm Password is Required</small>
       </div>
+      <div class="form-control">
+        <label for="text">Message</label>
+        <textarea
+        onclick="countDisplay()" 
+        maxlength="300"
+        name="text" 
+        id="text"
+        cols="40" 
+        rows="8">
+      </textarea>
+      </div>
+      <div class="count" id="count">
+        <span id="current">0</span>
+        <span id="limit">/300</span>
+      </div>
       <button type="submit">Submit</button>
     </form>
+    <small class="note"><span>*</span> Required Field</small>
   </div>
   <script src="./javascript/script.js"></script>
 </body>

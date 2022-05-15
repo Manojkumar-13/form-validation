@@ -91,3 +91,46 @@ button{
   display: block;
   width: 100%;
 }
+span{
+  color: red;
+}
+a{
+  position: relative;
+  color: var(--clr-text);
+}
+a:hover{
+  color: var(--clr-dark-text);
+}
+i{
+  position: absolute;
+  left: 29rem;
+  bottom: 1.2rem;
+}
+.count span{
+  position: relative;
+  color: var(--clr-text);
+  font-size: 1.5rem;
+  left: 27rem;
+  bottom: 3rem;
+}
+.note{
+  color: red;
+  font-size: 1.4rem;
+  padding: 2rem;
+  position: relative;
+  bottom: 2rem;
+  left: 2rem;
+}
+.form-control textarea{
+  resize: none;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--clr-text);
+  font-size:1.4rem;
+}
+.form-control textarea:focus{
+  outline: 0;
+  border-color: var(--clr-dark-text);
+}
