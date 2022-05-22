@@ -18,7 +18,7 @@ html{
 }
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: var(--clr-dark-text);
+  background-color:blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@ h2{
 .form-control.error small{
   visibility: visible;
 }
-button{
+.btn-submit{
   cursor: pointer;
   background-color: var(--clr-dark-text);
   color: var(--clr-white);
@@ -94,17 +94,15 @@ button{
 span{
   color: red;
 }
-a{
-  position: relative;
-  color: var(--clr-text);
-}
-a:hover{
-  color: var(--clr-dark-text);
-}
+
 i{
-  position: absolute;
-  left: 29rem;
-  bottom: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  left: 28rem;
+  bottom: 3rem;
+}
+i:hover{
+  color: var(--clr-text);
 }
 .count span{
   position: relative;
@@ -134,3 +132,4 @@ i{
   outline: 0;
   border-color: var(--clr-dark-text);
 }
+

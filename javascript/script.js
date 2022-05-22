@@ -71,18 +71,27 @@ const checkPasswordMatch = function(input1,input2){
     }
   }
 }
+
+// password visibility
+const visible = function(input){
+  const type = input.getAttribute('type') === 'password'?'text':'password';
+  password.setAttribute('type',type);
+  
+}
+const visibility = document.getElementById('visibility');
+visibility.addEventListener('click',function(e){
+  visible(password);
+})
+
 // count function
 const text = document.getElementById('text');
 const current = document.getElementById('current');
 const countDisplay = function(){
-  for(let i = 0; i < text.value.length; i++){
-    if(text.value.length < 300){
-      current.innertext = i;
-    }
-  }
+  if(text.value !==''){
+    current.innerHTML = text.value.length
+  }else
+  current.innerHTML = 0;
 }
-
-
 // eventListener
 form.addEventListener('submit',(e) => {
   e.preventDefault();
@@ -93,7 +102,7 @@ form.addEventListener('submit',(e) => {
   checkLength(password, 5, 12);
   checkPasswordMatch(password,confirmPassword);
   
-})
+});
 // Event Listener
 // form.addEventListener('submit',function(event){
 //   event.preventDefault();

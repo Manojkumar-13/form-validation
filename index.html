@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <body>
   <div class="container">
+    <!--  -->
     <h2>Connect with us</h2>
     <form action="#" class="form" id="form">
       <div class="form-control">
@@ -50,7 +51,7 @@
           id="password"
           placeholder="Enter Password"
           />
-          <a href="#"><i class="fa-solid fa-eye fa-2x"></i></a>
+        <i class="fa-solid fa-eye fa-2x" id="visibility"></i>
           
         <small>Password is Required</small>
       </div>
@@ -66,8 +67,8 @@
       </div>
       <div class="form-control">
         <label for="text">Message</label>
-        <textarea
-        onclick="countDisplay()" 
+        <textarea 
+        onkeyup="countDisplay()"
         maxlength="300"
         name="text" 
         id="text"
@@ -79,7 +80,7 @@
         <span id="current">0</span>
         <span id="limit">/300</span>
       </div>
-      <button type="submit">Submit</button>
+      <button class="btn-submit" type="submit">Submit</button>
     </form>
     <small class="note"><span>*</span> Required Field</small>
   </div>
